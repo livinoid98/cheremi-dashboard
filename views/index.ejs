@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard - 체레미 마카</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/layout.css" type="text/css"/>
+    <script type="text/javascript" src="https://d3js.org/d3.v5.js"></script>
+</head>
+<body>
+    <div class="seo-stickgraph">
+        <div class="seo-first">
+            <div class="stick-title-wrap">
+                <h3>검색엔진 최상단 노출 건수</h3>
+            </div>
+            <div class="stick-label-wrap">
+                <ul>
+                    <li>체레미 마카</li>
+                    <li>이브 콘돔</li>
+                    <li>이브컵</li>
+                    <li>이브젤</li>
+                </ul>
+            </div>
+        </div>
+        <div class="seo-home">
+            <div class="stick-title-wrap">
+                <h3>검색엔진 1페이지 노출 건수</h3>
+            </div>
+            <div class="stick-label-wrap">
+                <ul>
+                    <li>체레미 마카</li>
+                    <li>이브 콘돔</li>
+                    <li>이브컵</li>
+                    <li>이브젤</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dataset" style="display:none">
+        <span class="cheremimaka"><%= cheremimaka %></span>
+        <span class="evecondom"><%= evecondom %></span>
+        <span class="evecup"><%= evecup %></span>
+        <span class="evejel"><%= evejel %></span>
+        <span class="cheremimakaHome"><%= cheremimaka_home %></span>
+        <span class="evecondomHome"><%= evecondom_home %></span>
+        <span class="evecupHome"><%= evecup_home %></span>
+        <span class="evejelHome"><%= evejel_home %></span>
+    </div>
+    
+    <script src="./js/firstpage.js" type="text/javascript" text="javascript"></script>
+    <script src="./js/homepage.js" type="text/javascript" text="javascript"></script>
+</body>
+</html>

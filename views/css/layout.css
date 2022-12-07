@@ -1,0 +1,49 @@
+.stick-title-wrap {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stick-title-wrap h3 {
+  font-family: "Pretendard-bold";
+  font-size: 24px;
+}
+
+.stick-label-wrap {
+  position: absolute;
+  bottom: 0;
+}
+.stick-label-wrap ul {
+  display: flex;
+  justify-content: center;
+}
+.stick-label-wrap ul li {
+  width: 50px;
+  font-family: "Pretendard-regular";
+  font-size: 10px;
+  color: #747474;
+  text-align: center;
+}
+
+.seo-stickgraph {
+  display: flex;
+}
+.seo-stickgraph .seo-first {
+  width: 400px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.seo-stickgraph .seo-home {
+  width: 400px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}/*# sourceMappingURL=layout.css.map */
