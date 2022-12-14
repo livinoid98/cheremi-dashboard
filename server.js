@@ -1,5 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const puppeteer = require('puppeteer');
 const fs = require('fs');
 const express = require('express');
 const app = express();
@@ -246,6 +247,38 @@ evejelHome().then((html) => {
 
 
 
+const cupNaverShopInfinite = async () => {
+    try{
+        const browser = await puppeteer.launch({
+            headless: false,
+        });
+        const page = await browser.newPage();
+        await page.goto("https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=%EC%A0%A4&pagingIndex=1&pagingSize=40&productSet=total&query=%EC%A0%A4&sort=rel&timestamp=&viewType=list");
+
+        let result = await page.evaluate(() => {
+            let name = [];
+            const nameElem = document.querySelectorAll(".basicList_link__JLQJf");
+            nameElem.forEach( v => {
+                if(v){
+                    name.push(v);
+                }
+                v.parentElement.removeChild(v);
+            });
+            return name;
+        });
+
+        console.log(result);
+
+        await page.close();
+        await browser.close();
+    }catch (err){
+        console.log(err);
+    }finally{
+
+    }
+}
+
+cupNaverShopInfinite();
 
 
 
@@ -265,8 +298,7 @@ evejelHome().then((html) => {
 
 
 
-
-const cupNaverShop = async () => {
+/*const cupNaverShop = async () => {
     try{
         return await axios.get('https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=%EC%A0%A4&pagingIndex=1&pagingSize=40&productSet=total&query=%EC%A0%A4&sort=rel&timestamp=&viewType=list');
     }catch(err){
@@ -293,7 +325,7 @@ cupNaverShop().then((html) => {
     cup_navershop = count;
     console.log(res.mainTitle);
     console.log(cup_navershop);
-});
+});*/
 
 
 
