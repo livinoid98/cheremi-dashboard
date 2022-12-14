@@ -275,7 +275,7 @@ const cupNaverShop = async () => {
 }
 cupNaverShop().then((html) => {
     const $ = cheerio.load(html.data);
-    window.scrollBy(0, window.innerHeight);
+    console.log(html.data);
     const data = {
         mainTitle : $(".basicList_mall__BC5Xu").map((idx, el) => {
             return $(el).text();
